@@ -1,13 +1,13 @@
 {
-    "defaultSeverity": "error",
-    "extends": [
-        "tslint:recommended",
-        "tslint-config-airbnb",
-        "tslint-react"
-    ],
-    "jsRules": {},
-    "rules": {
-        "variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case"] 
-    },
-    "rulesDirectory": []
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended",
+    "tslint-config-airbnb",
+    "tslint-react"
+  ],
+  "jsRules": {},
+  "rules": {
+    "variable-name": [true, "ban-keywords", "check-format", "allow-pascal-case"] 
+  },
+  "rulesDirectory": []
 }
