@@ -1,13 +1,16 @@
 import * as React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import ListOfPersonsScene from './scenes/ListOfPersonsScene';
+import { Container } from 'reactstrap';
 import CreatePersonScene from './scenes/CreatePersonScene';
+import ListOfPersonsScene from './scenes/ListOfPersonsScene';
 
 const App: React.FC = () => {
   return (
     <Router>
-      <Route exact path="/" component={ListOfPersonsScene} />
-      <Route path="/create-person" component={CreatePersonScene} />
+      <Container>
+        <Route exact={true} path="/" component={ListOfPersonsScene} />
+        <Route path="/create-person" component={CreatePersonScene} />
+      </Container>
     </Router>
   );
 };
