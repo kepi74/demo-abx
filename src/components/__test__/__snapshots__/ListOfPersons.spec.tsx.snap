@@ -1,0 +1,232 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListOfPersons Component renders content of table if persons property is provide 1`] = `
+<table
+  className="table"
+>
+  <thead>
+    <tr>
+      <th>
+        person.name
+      </th>
+      <th>
+        person.surname
+      </th>
+      <th>
+        person.email
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        Pavel
+      </td>
+      <td>
+        Kepka
+      </td>
+      <td>
+        <a
+          href="mailto:kepi@kepi.name"
+        >
+          kepi@kepi.name
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Jana
+      </td>
+      <td>
+        Kantorová
+      </td>
+      <td>
+        <a
+          href="mailto:janca.kantoj@gmail.com"
+        >
+          janca.kantoj@gmail.com
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`ListOfPersons Component renders content of table if persons property is provided 1`] = `
+<table
+  className="table"
+>
+  <thead>
+    <tr>
+      <th>
+        person.name
+      </th>
+      <th>
+        person.surname
+      </th>
+      <th>
+        person.email
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        Pavel
+      </td>
+      <td>
+        Kepka
+      </td>
+      <td>
+        <a
+          href="mailto:kepi@kepi.name"
+        >
+          kepi@kepi.name
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Jana
+      </td>
+      <td>
+        Kantorová
+      </td>
+      <td>
+        <a
+          href="mailto:janca.kantoj@gmail.com"
+        >
+          janca.kantoj@gmail.com
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`ListOfPersons Component renders noData row if error property is true 1`] = `
+<table
+  className="table"
+>
+  <thead>
+    <tr>
+      <th>
+        person.name
+      </th>
+      <th>
+        person.surname
+      </th>
+      <th>
+        person.email
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td
+        colSpan={3}
+      >
+        list.noData
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`ListOfPersons Component renders noData row if persons property is empty array 1`] = `
+<table
+  className="table"
+>
+  <thead>
+    <tr>
+      <th>
+        person.name
+      </th>
+      <th>
+        person.surname
+      </th>
+      <th>
+        person.email
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td
+        colSpan={3}
+      >
+        list.noData
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`ListOfPersons Component renders noData row if persons property is undefined 1`] = `
+<table
+  className="table"
+>
+  <thead>
+    <tr>
+      <th>
+        person.name
+      </th>
+      <th>
+        person.surname
+      </th>
+      <th>
+        person.email
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td
+        colSpan={3}
+      >
+        list.noData
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`ListOfPersons Component renders spinner if loading property is true 1`] = `
+<table
+  className="table"
+>
+  <thead>
+    <tr>
+      <th>
+        person.name
+      </th>
+      <th>
+        person.surname
+      </th>
+      <th>
+        person.email
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td
+        colSpan={3}
+      >
+        <div
+          className="spinner-border-sm spinner-border text-secondary"
+          role="status"
+        >
+          <span
+            className="sr-only"
+          >
+            Loading...
+          </span>
+        </div>
+         
+        list.loading
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;

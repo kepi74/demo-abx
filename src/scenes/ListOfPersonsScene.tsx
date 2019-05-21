@@ -1,25 +1,10 @@
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { Button, Spinner, Table } from 'reactstrap';
+import { Button } from 'reactstrap';
 import ApiError from '../components/ApiError';
-
-interface IPerson {
-  email: string;
-  id: string;
-  name?: string;
-  surname: string;
-}
-
-const renderPersonRow = ({ id, name, surname, email }: IPerson) => (
-  <tr key={id}>
-    <td>{name || ''}</td>
-    <td>{surname}</td>
-    <td>
-      <a href={`mailto:${email}`}>{email}</a>
-    </td>
-  </tr>
-);
+import ListOfPersons from '../components/ListOfPersons';
+import { IPerson } from '../types';
 
 const ListOfPersonsScene: React.FC = () => {
   const [t] = useTranslation();
@@ -36,26 +21,7 @@ const ListOfPersonsScene: React.FC = () => {
           <Button color="primary">{t('list.createPerson')}</Button>
         </Link>
       </div>
-      <Table>
-        <thead>
-          <tr>
-            <th>{t('person.name')}</th>
-            <th>{t('person.surname')}</th>
-            <th>{t('person.email')}</th>
-          </tr>
-        </thead>
-        <tbody>
-          {(persons.length === 0) && (<tr><td colSpan={3}>{t('list.noData')}</td></tr>)}
-          {(persons.length > 0) && persons.map(renderPersonRow)}
-          <tr>
-            <td colSpan={3}>
-              <Spinner color="secondary" size="sm" />
-              {' '}
-              {t('list.loading')}
-            </td>
-          </tr>
-        </tbody>
-      </Table>
+      <ListOfPersons t={t} loading={false} error={false} persons={persons} />
     </>
   );
 };
