@@ -1,57 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ListOfPersons Component renders content of table if persons property is provide 1`] = `
-<table
-  className="table"
->
-  <thead>
-    <tr>
-      <th>
-        person.name
-      </th>
-      <th>
-        person.surname
-      </th>
-      <th>
-        person.email
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        Pavel
-      </td>
-      <td>
-        Kepka
-      </td>
-      <td>
-        <a
-          href="mailto:kepi@kepi.name"
-        >
-          kepi@kepi.name
-        </a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Jana
-      </td>
-      <td>
-        Kantorová
-      </td>
-      <td>
-        <a
-          href="mailto:janca.kantoj@gmail.com"
-        >
-          janca.kantoj@gmail.com
-        </a>
-      </td>
-    </tr>
-  </tbody>
-</table>
-`;
-
 exports[`ListOfPersons Component renders content of table if persons property is provided 1`] = `
 <table
   className="table"
