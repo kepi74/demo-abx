@@ -16,7 +16,7 @@ const ListOfPersonsScene: React.FC = () => {
     const fetchData = async() => {
       setIsloading(true);
       try {
-        const response = await axios.get('http://localhost:5000/api/persons');
+        const response = await axios.get(process.env.REACT_APP_API || '');
         setPersons(response.data);
       } catch (error) {
         setIsError(true);
@@ -24,7 +24,8 @@ const ListOfPersonsScene: React.FC = () => {
       setIsloading(false);
     };
     fetchData();
-  }, []);
+  },              []);
+
   return (
     <>
       <h1>{t('list.pageTitle')}</h1>

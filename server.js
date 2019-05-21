@@ -1,7 +1,11 @@
 const express = require('express');
 const cors = require('cors');
+const bodyParser = require('body-parser');
 
 const app = express();
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 const persons = [
   { id: 'aa', name: 'Pavel', surname: 'Kepka', email: 'kepi@kepi.name' },
@@ -10,6 +14,16 @@ const persons = [
 
 app.get('/api/persons', cors(), async (req, res, next) => {
   res.json(persons);
+});
+
+app.options('/api/persons', cors());
+
+app.post('/api/persons', cors(), async (req, res, next) => {
+  persons.push({
+    ...req.body,
+    id: String((new Date()).getTime()),
+  });
+  res.json({ success: true });
 });
 
 const PORT = process.env.PORT || 5000;

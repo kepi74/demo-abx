@@ -1,6 +1,9 @@
-export interface IPerson {
+export interface IPersonData {
   email: string;
-  id: string;
   name?: string;
   surname: string;
+}
+
+export interface IPerson extends IPersonData {
+  id: string;
 }
