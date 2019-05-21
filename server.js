@@ -10,10 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, 'build')));
 
-const persons = [
-  { id: 'aa', name: 'Pavel', surname: 'Kepka', email: 'kepi@kepi.name' },
-  { id: 'bb', name: 'Jana', surname: 'Kantorová', email: 'janca.kantoj@gmail.com' },
-];
+const persons = [];
 
 app.get('/api/persons', cors(), async (req, res, next) => {
   res.json(persons);
