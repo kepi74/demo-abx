@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { Alert, Button, Spinner, Table } from 'reactstrap';
+import { Button, Spinner, Table } from 'reactstrap';
+import ApiError from '../components/ApiError';
 
 interface IPerson {
   email: string;
@@ -29,7 +30,7 @@ const ListOfPersonsScene: React.FC = () => {
   return (
     <>
       <h1>{t('list.pageTitle')}</h1>
-      <Alert color="danger">{t('list.errorLoadingData')}</Alert>
+      <ApiError t={t} error={true} />
       <div style={{ paddingTop: '1em', paddingBottom: '1em' }}>
         <Link to="/create-person">
           <Button color="primary">{t('list.createPerson')}</Button>

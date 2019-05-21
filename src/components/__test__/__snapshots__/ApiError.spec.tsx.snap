@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ApiError Component should not render error alert if error property is false 1`] = `null`;
+
+exports[`ApiError Component should render error alert if error property is true 1`] = `
+<div
+  className="alert alert-danger fade"
+  role="alert"
+>
+  list.errorLoadingData
+</div>
+`;
