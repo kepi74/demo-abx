@@ -1,11 +1,14 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const path = require('path');
 
 const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(express.static(path.join(__dirname, 'build')));
 
 const persons = [
   { id: 'aa', name: 'Pavel', surname: 'Kepka', email: 'kepi@kepi.name' },
@@ -24,6 +27,10 @@ app.post('/api/persons', cors(), async (req, res, next) => {
     id: String((new Date()).getTime()),
   });
   res.json({ success: true });
+});
+
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 const PORT = process.env.PORT || 5000;
